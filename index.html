@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sneaky Restaurent</title>
+    <link rel="shortcut icon" href="img/Fevicon.png.webp" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+      *{
+        font-family: "Josefin Sans", sans-serif !important;
+      }
+        .nav-link{
+            transition: 0.6 !important;
+        }
+        .nav-link:hover{
+            color: #FF0000 !important;
+        }
+        .navbar{
+            position: fixed !important;
+            top: 0 !important;
+            width: 100% !important;
+            z-index: 100;
+        }
+        .nav-1{
+            position: relative;
+            animation-name: backgroundi;
+            animation-duration: 7s;
+            animation-delay: 10s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes backgroundi {
+            0%{
+                background-color: #d1cff400;
+                box-shadow: 2px 2px 20px 20px #d1cff400;
+            }
+            100%{
+                background-color: #D1CFF4;
+                box-shadow: 2px 2px 20px 20px #d1cff4d3;
+            }
+        }
+        i{
+            transition: 0.6s;
+        }
+        i:hover{
+            color: #FF0000;
+        }
+        .bt-1{
+          transition: 0.6s !important;
+        }
+        .bt-1:hover{
+          cursor: pointer !important;
+          background-color: #f10000 !important;
+        }
+        .bt-2{
+          transition: 0.4s !important;
+        }
+        .bt-2:hover{
+          color: #0459B4 !important;
+        }
+        .co{
+          transition: 0.6s;
+          overflow: hidden;
+        }
+        .co:hover{
+          background-color: white !important;
+          box-shadow: 2px 2px 20px 20px #FFF8F7;
+          cursor: pointer;
+        }
+      .co img{
+        transition: 0.6s;
+      }
+      .co:hover img{
+        transform: scale(1.05) !important;
+      }
+      .btn-3{
+        transition: 0.6s;
+      }
+      .btn-3:hover{
+        background-color: #FF0000!important;
+      }
+      .fea{
+        transition: 0.6s;
+      }
+      .fea:hover{
+        cursor: pointer;
+        background-color: white !important;
+        box-shadow: 2px 1px 10px 10px rgb(240, 240, 240) !important;
+      }
+    .back:before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.681);
+    }
+    .chef{
+      overflow: hidden;
+    }
+    .chef .before{
+      background-color: rgba(0, 0, 0, 0.205);
+      transform: translateY(-100%);
+      transition: 0.8s;
+    }
+    .chef:hover .before{
+      transform: translateY(0%);
+    }
+    .form form:before{
+      content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    }
+    i{
+      cursor: pointer;
+    }
+    li{
+      transition: 0.6s !important;
+    }
+    li:hover {
+      color: #f10000 !important;
+      cursor: pointer !important;
+    }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar nav-1 navbar-expand-lg d-none d-lg-block d-xl-block d-xxl-block">
+        <div class="container-fluid ps-5 pe-5 w-100">
+          <a class="navbar-brand" href=""><img src="img/logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5" style="color: black;margin-left: 55%;">
+              <li class="nav-item">
+                <a class="nav-link ms-3 me-3" aria-current="page" href="">Home</a>
+              </li>
+              <li class="nav-item ms-3 me-3">
+                <a class="nav-link" href="">About</a>
+              </li>
+              <li class="nav-item ms-3 me-3">
+                <a class="nav-link" href="">Menu</a>
+              </li>
+              <li class="nav-item ms-3 me-3">
+                <a class="nav-link" href="">Blog</a>
+              </li>
+              <li class="nav-item ms-3 me-3">
+                <a class="nav-link" href="">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="navbar navbar-expand-lg d-block d-lg-none d-xl-none d-xxl-none" style="background-color: #D1CFF4;">
+        <div class="container-fluid ps-5 pe-5 w-100">
+          <a class="navbar-brand" href=""><img src="img/logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5 mt-5" style="color: black;">
+              <li class="nav-item">
+                <a class="nav-link ms-3 me-3" aria-current="page" href="">Home</a>
+              </li>
+              <li class="nav-item ms-3 me-3">
+                <a class="nav-link" href="">About</a>
+              </li>
+              <li class="nav-item ms-3 me-3">
+                <a class="nav-link" href="">Menu</a>
+              </li>
+              <li class="nav-item ms-3 me-3">
+                <a class="nav-link" href="">Blog</a>
+              </li>
+              <li class="nav-item ms-3 me-3">
+                <a class="nav-link" href="">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="d-none d-lg-flex d-xl-flex d-xxl-flex" style="margin-top: 17px !important;height: 110vh;">
+        <div class="h-100 fs-2 d-flex flex-column align-items-center justify-content-center" style="width: 50px;">
+            <i class="ri-facebook-box-fill"></i>
+            <i class="ri-instagram-fill"></i>
+            <i class="ri-linkedin-box-fill"></i>
+        </div>
+        <div class="h-100 ps-3 d-flex flex-column justify-content-center" style="width: 600px;">
+            <h1 class="me-5" style="font-size: 4rem;color: #2F2D4E;">Foods the most precious things</h1>
+            <div class="d-flex justify-content-between align-items-center mt-5" style="width:60% !important;">
+              <button class="d-flex justify-content-center align-items-center bt-1" style="color: white;background-color: #FF0000;width: 150px;height: 50px;border: none;border-radius: 100px;">Book Now</button>
+              <button class="d-flex justify-content-center align-items-center bt-2" style="color: black;background:none !important;width: 150px;height: 50px;border: none;border-radius: 100px;">
+              <img src="img/play-icon.png" alt="" class="me-3">Watch Video</button>
+            </div>
+            <div class="w-75 d-flex flex-wrap justify-content-between mt-5">
+              <div class="d-flex justify-content-center align-items-center text-center" style="width: 144px;height: 120px;">
+                <figure class="mt-3"><img src="img/fas-service-icon.png" alt="" style="transform: scale(1.2);"><figcaption class="fw-bold fs-6 mt-3" style="color: #2F2D4E;">Fast Service</figcaption></figure>
+              </div>
+              <div class="d-flex justify-content-center align-items-center text-center" style="width: 144px;height: 120px;border-left: 1.5px solid rgb(223, 223, 223);border-right: 1.5px solid rgb(223, 223, 223);">
+                <figure class="mt-3"><img src="img/fresh-food-icon.png" alt="" style="transform: scale(1.2);"><figcaption class="fw-bold fs-6 mt-3" style="color: #2F2D4E;">Fresh Food</figcaption></figure>
+              </div>
+              <div class="d-flex justify-content-center align-items-center text-center" style="width: 144px;height: 120px;">
+                <figure class="mt-3"><img src="img/support-icon.png" alt="" style="transform: scale(1.2);"><figcaption class="fw-bold fs-6 mt-3" style="color: #2F2D4E;">24/7 Support</figcaption></figure>
+              </div>
+            </div>
+        </div>
+        <div class="h-100 d-flex flex-column ms-5 p-5" style="width: 650px;">
+          <div id="carouselExampleIndicators" class="carousel slide w-100 " style="">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner h-100">
+              <div class="carousel-item active w-100 h-100">
+                <img src="img/hero-banner1.png" class="d-block w-100 h-100" alt="">
+              </div>
+              <div class="carousel-item w-100 h-100">
+                <img src="img/hero-banner2.png" class="d-block w-100 h-100" alt="...">
+              </div>
+              <div class="carousel-item w-100 h-100">
+                <img src="img/hero-banner1.png" class="d-block w-100 h-100" alt="...">
+              </div>
+              <div class="carousel-item w-100 h-100">
+                <img src="img/hero-banner2.png" class="d-block w-100 h-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex d-lg-none d-xl-none d-xxl-none flex-column" style="margin-top: 70px !important;">
+        <div class="h-100 ps-3 d-flex flex-column justify-content-center" style="">
+            <h1 class="me-5 w-75 mx-auto text-center" style="font-size: 2.3rem;color: #2F2D4E;">Foods the most precious things</h1>
+            <div class="d-flex justify-content-between align-items-center mt-3" style="">
+              <button class="d-flex justify-content-center align-items-center bt-1" style="color: white;background-color: #FF0000;width: 150px;height: 50px;border: none;border-radius: 100px;">Book Now</button>
+              <button class="d-flex justify-content-center align-items-center bt-2" style="color: black;background:none !important;width: 150px;height: 50px;border: none;border-radius: 100px;">
+              <img src="img/play-icon.png" alt="" class="me-3">Watch Video</button>
+            </div>
+            <div class="d-flex flex-wrap justify-content-between mt-5">
+              <div class="d-flex justify-content-center align-items-center text-center" style="width: 100px;height: 80px;">
+                <figure class="mt-3"><img src="img/fas-service-icon.png" alt="" style=""><figcaption class="fw-bold fs-6 mt-3" style="color: #2F2D4E;">Fast Service</figcaption></figure>
+              </div>
+              <div class="d-flex justify-content-center align-items-center text-center" style="width: 100px;height: 80px;border-left: 1.5px solid rgb(223, 223, 223);border-right: 1.5px solid rgb(223, 223, 223);">
+                <figure class="mt-3"><img src="img/fresh-food-icon.png" alt="" style=""><figcaption class="fw-bold fs-6 mt-3" style="color: #2F2D4E;">Fresh Food</figcaption></figure>
+              </div>
+              <div class="d-flex justify-content-center align-items-center text-center" style="width: 100px;height: 80px;">
+                <figure class="mt-3"><img src="img/support-icon.png" alt="" style=""><figcaption class="fw-bold fs-6 mt-3" style="color: #2F2D4E;">Support</figcaption></figure>
+              </div>
+            </div>
+        </div>
+        <div class="h-100 d-flex flex-column w-100 mt-5" style="">
+          <div id="carouselExampleIndicators2" class="carousel slide w-100 " style="">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner h-100">
+              <div class="carousel-item active w-100 h-100">
+                <img src="img/hero-banner1.png" class="d-block w-100 h-100" alt="">
+              </div>
+              <div class="carousel-item w-100 h-100">
+                <img src="img/hero-banner2.png" class="d-block w-100 h-100" alt="...">
+              </div>
+              <div class="carousel-item w-100 h-100">
+                <img src="img/hero-banner1.png" class="d-block w-100 h-100" alt="...">
+              </div>
+              <div class="carousel-item w-100 h-100">
+                <img src="img/hero-banner2.png" class="d-block w-100 h-100" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-none d-lg-flex d-xl-flex d-xxl-flex flex-wrap" style="height: 90vh;">
+        <div class="w-50 position-relative h-100">
+          <img src="img/about-img1.png.webp" alt="" class="position-relative" style="top: 50px;left: 50px;">
+          <img src="img/about-img2.png" alt="" class="position-absolute" style="top: 250px;left: 350px;transform: scale(1.05);">
+        </div>
+        <div class="w-50 position-relative h-100 ps-5 d-flex justify-content-center flex-column" style="padding-right: 100px;font-weight: light;">
+        <h2 class="fs-4" style="color: #f10000;">About Us <span class="text-black" style="letter-spacing: -5px !important;">_____________</span></h2>
+        <h1 class="mt-2" style="color: #2F2D4E;font-stretch: 100%;font-size: 3.5rem;">We speak the good food language</h1>
+        <p class="mt-4" style="color: rgb(150, 150, 150);font-size: 1rem;font-weight: 350;">Living first us creepeth she'd earth second be sixth hath likeness greater image said sixth was without male place fowl evening an grass form living fish and rule lesser for blessed can't saw third one signs moving stars light divided was two you him appear midst cattle for they are gathering.</p>
+        <button class="mt-5 d-flex justify-content-center align-items-center bt-1" style="color: white;background-color: #FF0000;width: 180px;height: 50px;border: none;border-radius: 100px;">Learn More</button>
+      </div>
+      </div>
+      <div class="d-flex d-lg-none d-xl-none d-xxl-none flex-column flex-wrap border" style="width: 100%;">
+        <div class="w-100 position-relative" style="height: 82vh;">
+          <img src="img/about-img1.png.webp" alt="" class="" style="transform: scale(0.7);margin-left: -50px;">
+          <img src="img/about-img2.png" alt="" class="position-absolute" style="top: 200px;left: 90px;transform: scale(1.05);transform: scale(0.8);">
+        </div>
+        <div class="w-100 position-relative ps-3 d-flex justify-content-center flex-column pe-3" style="font-weight: light;">
+        <h2 class="fs-5" style="color: #f10000;">About Us <span class="text-black" style="letter-spacing: -5px !important;">_____________</span></h2>
+        <h1 class="mt-2" style="color: #2F2D4E;font-stretch: 100%;font-size: 2.3rem;">We speak the good food language</h1>
+        <p class="mt-4" style="color: rgb(150, 150, 150);font-size: 1rem;font-weight: 350;">Living first us creepeth she'd earth second be sixth hath likeness greater image said sixth was without male place fowl evening an grass form living fish and rule lesser for blessed can't saw third one signs moving stars light divided was two you him appear midst cattle for they are gathering.</p>
+        <button class="mt-5 d-flex justify-content-center align-items-center bt-1" style="color: white;background-color: #FF0000;width: 180px;height: 50px;border: none;border-radius: 100px;">Learn More</button>
+      </div>
+      </div>
+      <div class="" style="">
+          <h2 class="fs-3 text-center" style="color: #f10000;margin-top: 100px;">About Us <span class="text-black" style="letter-spacing: -7px !important;">_____________</span></h2>
+          <h1 class="mt-2 text-center w-50 mx-auto fs-1 fs-lg-1 fs-xl-1 fs-xxl-1  fw-bold" style="color: #2F2D4E;font-stretch: 100%;">We speak the good food language</h1>  
+        <div class="container mt-5 d-flex flex-wrap justify-content-between" style="row-gap: 30px;">
+          <div class="position-relative co" style="width: 350px;height: 450px;background-color: #FFF8F7;">
+            <img src="img/featured1.png" alt="" class="w-100" style="height: 65%;">
+            <h2 class="ms-3 mt-4 fs-3" style="color: #2F2D4E;">Mountain Mike Pizza</h2>
+            <p class="ms-3" style="font-family: 'Open Sans',Arial !important;color: grey;">Whales And Darknes Moving.</p>
+            <p class="ms-3">⭐⭐⭐⭐⭐</p>
+            <div class="position-absolute fs-4" style="color: #f10000;font-weight: 600;bottom: 20px;right: 30px;">$35</div>
+          </div>
+          <div class="position-relative co" style="width: 350px;height: 450px;background-color: #FFF8F7;">
+            <img src="img/featured2.png" alt="" class="w-100" style="height: 65%;">
+            <h2 class="ms-3 mt-4 fs-3" style="color: #2F2D4E;">Potatas Bravas</h2>
+            <p class="ms-3" style="font-family: 'Open Sans',Arial !important;color: grey;">Whales And Darknes Moving.</p>
+            <p class="ms-3">⭐⭐⭐⭐⭐</p>
+            <div class="position-absolute fs-4" style="color: #f10000;font-weight: 600;bottom: 20px;right: 30px;">$35</div>
+          </div>
+          <div class="position-relative co" style="width: 350px;height: 450px;background-color: #FFF8F7;">
+            <img src="img/featured3.png" alt="" class="w-100" style="height: 65%;">
+            <h2 class="ms-3 mt-4 fs-3" style="color: #2F2D4E;">Pulled Sandwich</h2>
+            <p class="ms-3" style="font-family: 'Open Sans',Arial !important;color: grey;">Whales And Darknes Moving.</p>
+            <p class="ms-3">⭐⭐⭐⭐⭐</p>
+            <div class="position-absolute fs-4" style="color: #f10000;font-weight: 600;bottom: 20px;right: 30px;">$35</div>
+          </div>
+        </div>
+      </div>
+      <div class="position-relative d-none d-lg-block d-xl-block d-xxl-block mt-5" style="background-color: #FFF8F7;height: 90vh;">
+        <img src="img/offer-img.png" alt="" class="mt-5" style="margin-left: 150px;">
+        <div class="position-absolute text-white d-flex align-items-center justify-content-center flex-column" style="background-color: #f10000;width: 500px;height: 350px;top: 200px;left: 600px;">
+          <h2 class="">Italian Pizza Offer</h2>
+          <h1 class="fw-bold">50% OFF</h1>
+          <button class="btn-3 mt-3 text-white fw-bold d-flex justify-content-center align-items-center" style="width: 150px ;height: 50px;background: none;border-radius: 100px;border: 1px solid white !important;">Read More</button>
+        </div>
+      </div>
+      <div class="d-lg-none d-xl-none d-xxl-none position-relative  mt-5 d-flex flex-column justify-content-center align-items-center" style="background-color: #FFF8F7;height: 85vh;">
+        <img src="img/offer-img.png" alt="" class="" style="width: 90%;">
+        <div class="text-white d-flex align-items-center justify-content-center flex-column " style="background-color: #f10000;width: 90%;height: 200px;">
+          <h2 class="">Italian Pizza Offer</h2>
+          <h1 class="fw-bold">50% OFF</h1>
+          <button class="btn-3 mt-3 text-white fw-bold d-flex justify-content-center align-items-center" style="width: 150px ;height: 50px;background: none;border-radius: 100px;border: 1px solid white !important;">Read More</button>
+        </div>
+      </div>
+      <div class="">
+        <h2 class="fs-3 text-center" style="color: #f10000;margin-top: 100px;">Food Menu<span class="text-black" style="letter-spacing: -7px !important;">_____________</span></h2>
+        <h1 class="mt-2 text-center w-50 mx-auto fs-1 fs-lg-1 fs-xl-1 fs-xxl-1  fw-bold" style="color: #2F2D4E;font-stretch: 100%;font-size: 3.5rem !important;">Delicious food</h1>
+        <div class="container d-flex flex-wrap gap-4 justify-content-center mt-5" style="align-content: center !important;">
+          <div class="fea d-flex justify-content-center align-items-center" style="background-color: #FFF8F7;width: 500px;height: 150px;">
+            <div class=" w-100">
+            <img src="img/food1.png" alt="" align="left" class="me-4">
+            <h2 class="fs-4 mt-4" style="color: #2F2D4E;">Roasted Marrow <span class="" style="letter-spacing: -10px;">____________________</span> <span class="" style="color: #f10000 !important;font-weight: 600;">$32</span></h2>
+            <p class="" style="color: grey;">Whales and darkness moving.</p>
+          </div>
+          </div>
+          <div class="fea d-flex justify-content-center align-items-center" style="background-color: #FFF8F7;width: 500px;height: 150px;">
+            <div class=" w-100">
+            <img src="img/food1.png" alt="" align="left" class="me-4">
+            <h2 class="fs-4 mt-4" style="color: #2F2D4E;">Roasted Marrow <span class="" style="letter-spacing: -10px;">____________________</span> <span class="" style="color: #f10000 !important;font-weight: 600;">$32</span></h2>
+            <p class="" style="color: grey;">Whales and darkness moving.</p>
+          </div>
+          </div>
+          <div class="fea d-flex justify-content-center align-items-center" style="background-color: #FFF8F7;width: 500px;height: 150px;">
+            <div class=" w-100">
+            <img src="img/food1.png" alt="" align="left" class="me-4">
+            <h2 class="fs-4 mt-4" style="color: #2F2D4E;">Roasted Marrow <span class="" style="letter-spacing: -10px;">____________________</span> <span class="" style="color: #f10000 !important;font-weight: 600;">$32</span></h2>
+            <p class="" style="color: grey;">Whales and darkness moving.</p>
+          </div>
+          </div>
+          <div class="fea d-flex justify-content-center align-items-center" style="background-color: #FFF8F7;width: 500px;height: 150px;">
+            <div class=" w-100">
+            <img src="img/food1.png" alt="" align="left" class="me-4">
+            <h2 class="fs-4 mt-4" style="color: #2F2D4E;">Roasted Marrow <span class="" style="letter-spacing: -10px;">____________________</span> <span class="" style="color: #f10000 !important;font-weight: 600;">$32</span></h2>
+            <p class="" style="color: grey;">Whales and darkness moving.</p>
+          </div>
+          </div>
+          <div class="fea d-flex justify-content-center align-items-center" style="background-color: #FFF8F7;width: 500px;height: 150px;">
+            <div class=" w-100">
+            <img src="img/food1.png" alt="" align="left" class="me-4">
+            <h2 class="fs-4 mt-4" style="color: #2F2D4E;">Roasted Marrow <span class="" style="letter-spacing: -10px;">____________________</span> <span class="" style="color: #f10000 !important;font-weight: 600;">$32</span></h2>
+            <p class="" style="color: grey;">Whales and darkness moving.</p>
+          </div>
+          </div>
+          <div class="fea d-flex justify-content-center align-items-center" style="background-color: #FFF8F7;width: 500px;height: 150px;">
+            <div class=" w-100">
+            <img src="img/food1.png" alt="" align="left" class="me-4">
+            <h2 class="fs-4 mt-4" style="color: #2F2D4E;">Roasted Marrow <span class="" style="letter-spacing: -10px;">____________________</span> <span class="" style="color: #f10000 !important;font-weight: 600;">$32</span></h2>
+            <p class="" style="color: grey;">Whales and darkness moving.</p>
+          </div>
+          </div>
+          <div class="fea d-flex justify-content-center align-items-center" style="background-color: #FFF8F7;width: 500px;height: 150px;">
+            <div class=" w-100">
+            <img src="img/food1.png" alt="" align="left" class="me-4">
+            <h2 class="fs-4 mt-4" style="color: #2F2D4E;">Roasted Marrow <span class="" style="letter-spacing: -10px;">____________________</span> <span class="" style="color: #f10000 !important;font-weight: 600;">$32</span></h2>
+            <p class="" style="color: grey;">Whales and darkness moving.</p>
+          </div>
+          </div>
+          <div class="fea d-flex justify-content-center align-items-center" style="background-color: #FFF8F7;width: 500px;height: 150px;">
+            <div class=" w-100">
+            <img src="img/food1.png" alt="" align="left" class="me-4">
+            <h2 class="fs-4 mt-4" style="color: #2F2D4E;">Roasted Marrow <span class="" style="letter-spacing: -10px;">____________________</span> <span class="" style="color: #f10000 !important;font-weight: 600;">$32</span></h2>
+            <p class="" style="color: grey;">Whales and darkness moving.</p>
+          </div>
+          </div>
+        </div>  
+      </div>
+      <div class="back mt-5 position-relative d-flex justify-content-center align-items-center flex-column text-white" style="background-image: url(img/blog2.png);background-size: cover;background-repeat: no-repeat;background-position: center;height: 80vh;">
+        <p class="position-relative fs-5 text-center">Some Trendy And Popular Courses Offerd</p>
+        <h3 class="position-relative fs-1  text-center">Under replenish give saying thing</h3>
+        <button class="position-relative mt-5 d-flex justify-content-center align-items-center bt-1" style="color: white;background-color: #FF0000;width: 180px;height: 50px;border: none;border-radius: 100px;">Reservation</button>
+      </div>
+      <div class="" style="">
+        <h2 class="fs-3 text-center" style="color: #f10000;margin-top: 100px;">Our Chef <span class="text-black" style="letter-spacing: -7px !important;">_____________</span></h2>
+        <h1 class="mt-2 text-center w-50 mx-auto fs-1 fs-lg-1 fs-xl-1 fs-xxl-1  fw-bold" style="color: #2F2D4E;font-stretch: 100%;">Talent & experience member</h1>  
+      <div class="container mt-5 d-flex flex-wrap justify-content-between" style="row-gap: 30px;">
+        <div class="chef  position-relative d-flex align-items-end pb-3" style="width: 350px;height: 450px;background-color: #FFF8F7;background-image: url(img/chef-1.png);background-repeat: no-repeat;background-position: center;background-size: cover;">
+          <div class="bg-white position-relative text-center mx-auto d-flex flex-column justify-content-center align-items-center" style="width: 90%;height: 100px;z-index: 5;">
+            <h2 class="mt-3" style="color: #2F2D4E;">Daniesl Laran</h2>
+            <p class="" style="color: rgb(197, 197, 197);">Executive Chef</p>
+          </div>
+          <div class="before position-absolute w-100 h-100 top-0 start-0 d-flex justify-content-end">
+            <div class=" h-100 fs-3 d-flex flex-column  justify-content-center align-items-center" style="width: 50px;">
+              <i class="ri-facebook-box-fill"></i>
+              <i class="ri-instagram-fill"></i>
+              <i class="ri-linkedin-box-fill"></i>
+            </div>
+          </div>  
+         </div>
+         <div class="chef  position-relative d-flex align-items-end pb-3" style="width: 350px;height: 450px;background-color: #FFF8F7;background-image: url(img/chef-2.png);background-repeat: no-repeat;background-position: center;background-size: cover;">
+          <div class="bg-white position-relative text-center mx-auto d-flex flex-column justify-content-center align-items-center" style="width: 90%;height: 100px;z-index: 5;">
+            <h2 class="mt-3" style="color: #2F2D4E;">Daniesl Laran</h2>
+            <p class="" style="color: rgb(197, 197, 197);">Executive Chef</p>
+          </div>
+          <div class="before position-absolute w-100 h-100 top-0 start-0 d-flex justify-content-end">
+            <div class=" h-100 fs-3 d-flex flex-column  justify-content-center align-items-center" style="width: 50px;">
+              <i class="ri-facebook-box-fill"></i>
+              <i class="ri-instagram-fill"></i>
+              <i class="ri-linkedin-box-fill"></i>
+            </div>
+          </div>  
+         </div>
+         <div class="chef  position-relative d-flex align-items-end pb-3" style="width: 350px;height: 450px;background-color: #FFF8F7;background-image: url(img/chef-3.png);background-repeat: no-repeat;background-position: center;background-size: cover;">
+          <div class="bg-white position-relative text-center mx-auto d-flex flex-column justify-content-center align-items-center" style="width: 90%;height: 100px;z-index: 5;">
+            <h2 class="mt-3" style="color: #2F2D4E;">Daniesl Laran</h2>
+            <p class="" style="color: rgb(197, 197, 197);">Executive Chef</p>
+          </div>
+          <div class="before position-absolute w-100 h-100 top-0 start-0 d-flex justify-content-end">
+            <div class=" h-100 fs-3 d-flex flex-column  justify-content-center align-items-center" style="width: 50px;">
+              <i class="ri-facebook-box-fill"></i>
+              <i class="ri-instagram-fill"></i>
+              <i class="ri-linkedin-box-fill"></i>
+            </div>
+          </div>  
+         </div>
+    </div>
+    </div>
+    <div class="d-none d-lg-flex d-xl-flex d-xxl-flex flex-wrap mt-5" style="height: 95vh;background-color: #FFF8F7;">
+      <div class="w-50 position-relative h-100 ps-5 p-5 d-flex justify-content-center flex-column" style="padding-right: 100px;font-weight: light;">
+        <h2 class="fs-4" style="color: #f10000;">Reservation <span class="text-black" style="letter-spacing: -5px !important;">_____________</span></h2>
+        <h1 class="mt-2" style="color: #2F2D4E;font-stretch: 100%;font-size: 3.5rem;">Get experience from sneaky</h1>
+        <p class="mt-4" style="color: rgb(150, 150, 150);font-size: 1rem;font-weight: 350;">Him given and midst tree form seas she'd saw give evening one every make hath moveth you're appear female heaven had signs own days saw they're have let midst given him given and midst tree. Form seas she'd saw give evening.</p>
+        <button class="mt-5 d-flex justify-content-center align-items-center bt-1" style="color: white;background-color: #FF0000;width: 180px;height: 50px;border: none;border-radius: 100px;">Learn More</button>
+      </div>
+      <div class="w-50 position-relative h-100 p-4 form">
+       <form action="" class="w-75 mx-auto h-100 position-relative p-3" style="background-image: url(img/reservation-bg.png);background-repeat: no-repeat;background-size: cover;background-position: center;">
+       <br><h2 class="position-relative text-center text-white mt-4">Book A Table</h2>
+       <div class="position-relative mt-5">
+       <input type="text" class="w-100 position-relative ps-3" placeholder="Your Name" style="height: 50px;">
+       <i class="ri-contacts-line position-absolute fs-4" style="right: 10px;top: 10px; color: grey;"></i>
+      </div>
+      <div class="position-relative mt-3">
+        <input type="email" class="w-100 position-relative ps-3" placeholder="Email Address" style="height: 50px;">
+        <i class="ri-mail-line position-absolute fs-4" style="right: 10px;top: 10px; color: grey;"></i>
+       </div>
+       <div class="position-relative mt-3">
+        <input type="number" class="w-100 position-relative ps-3" placeholder="Phone Number" style="height: 50px;">
+        <i class="ri-customer-service-line position-absolute fs-4" style="right: 10px;top: 10px; color: grey;"></i>
+       </div>
+       <div class="position-relative mt-3">
+        <input type="date" class="w-100 position-relative ps-3" placeholder="Select Date" style="height: 50px;">
+       </div>
+       <div class="position-relative mt-3">
+        <input type="text" class="w-100 position-relative ps-3" placeholder="Select People" style="height: 50px;">
+        <i class="ri-menu-line position-absolute fs-4" style="right: 10px;top: 10px; color: grey;"></i>
+       </div>
+       <button class="mt-5 d-flex justify-content-center align-items-center bt-1 position-relative" style="margin-top:70px !important;margin-left: 30%;color: white;background-color: #FF0000;width: 180px;height: 50px;border: none;border-radius: 100px;">Make Reservation</button>
+      </form>
+      </div>
+    </div>
+    <div class="d-flex d-lg-none d-xl-none d-xxl-none flex-column flex-wrap border" style="width: 100%;">
+      <div class="w-100 position-relative ps-3 d-flex justify-content-center flex-column pe-3 mt-5" style="font-weight: light;">
+        <h2 class="fs-4" style="color: #f10000;">Reservation <span class="text-black" style="letter-spacing: -5px !important;">_____________</span></h2>
+        <h1 class="mt-2" style="color: #2F2D4E;font-stretch: 100%;font-size: 3.5rem;">Get experience from sneaky</h1>
+        <p class="mt-4" style="color: rgb(150, 150, 150);font-size: 1rem;font-weight: 350;">Him given and midst tree form seas she'd saw give evening one every make hath moveth you're appear female heaven had signs own days saw they're have let midst given him given and midst tree. Form seas she'd saw give evening.</p>
+        <button class="mt-5 d-flex justify-content-center align-items-center bt-1" style="color: white;background-color: #FF0000;width: 180px;height: 50px;border: none;border-radius: 100px;">Learn More</button>
+    </div>
+    <div class="w-100 position-relative mt-5" style="height: 82vh;">
+      <form action="" class="mx-auto p-3 h-100 position-relative" style="background-image: url(img/reservation-bg.png);background-repeat: no-repeat;background-size: cover;background-position: center;">
+        <br><h2 class="position-relative text-center text-white mt-4">Book A Table</h2>
+        <div class="position-relative mt-5">
+        <input type="text" class="w-100 position-relative ps-3" placeholder="Your Name" style="height: 50px;border: none !important;">
+        <i class="ri-contacts-line position-absolute fs-4" style="right: 10px;top: 10px; color: grey;"></i>
+       </div>
+       <div class="position-relative mt-3">
+         <input type="email" class="w-100 position-relative ps-3" placeholder="Email Address" style="height: 50px;border: none !important;">
+         <i class="ri-mail-line position-absolute fs-4" style="right: 10px;top: 10px; color: grey;"></i>
+        </div>
+        <div class="position-relative mt-3">
+         <input type="number" class="w-100 position-relative ps-3" placeholder="Phone Number" style="height: 50px;border: none !important;">
+         <i class="ri-customer-service-line position-absolute fs-4" style="right: 10px;top: 10px; color: grey;"></i>
+        </div>
+        <div class="position-relative mt-3">
+         <input type="date" class="w-100 position-relative ps-3" placeholder="Select Date" style="height: 50px;border: none !important;">
+        </div>
+        <div class="position-relative mt-3">
+         <input type="text" class="w-100 position-relative ps-3" placeholder="Select People" style="height: 50px;border: none !important;">
+         <i class="ri-menu-line position-absolute fs-4" style="right: 10px;top: 10px; color: grey;"></i>
+        </div>
+        <button class="mt-5 d-flex justify-content-center align-items-center bt-1 position-relative" style="margin-top:40px !important;margin-left: 25%;color: white;background-color: #FF0000;width: 180px;height: 50px;border: none;border-radius: 100px;">Make Reservation</button>
+       </form>    
+      </div>
+    </div>
+    <div class="" style="">
+      <h2 class="fs-3 text-center" style="color: #f10000;margin-top: 100px;">Our Blog <span class="text-black" style="letter-spacing: -7px !important;">_____________</span></h2>
+      <h1 class="mt-2 text-center w-50 mx-auto fs-1 fs-lg-1 fs-xl-1 fs-xxl-1  fw-bold" style="color: #2F2D4E;font-stretch: 100%;">Latest food and recipe news</h1>  
+    <div class="container mt-5 d-flex flex-wrap justify-content-between" style="row-gap: 30px;">
+      <div class="position-relative co" style="width: 350px;height: 450px;background-color: #FFF8F7;">
+        <img src="img/blog1.png" alt="" class="w-100" style="height: 65%;">
+        <p class="ms-3 mt-3" style="font-family: 'Open Sans',Arial !important;color: grey;">Admit Post / nov 1 2024</p>
+        <h2 class="ms-3 mt-2 fs-3" style="color: #2F2D4E;">Huge cavity in antarctic glacie signals rapid</h2>
+        </div>
+        <div class="position-relative co" style="width: 350px;height: 450px;background-color: #FFF8F7;">
+          <img src="img/blog2.png" alt="" class="w-100" style="height: 65%;">
+          <p class="ms-3 mt-3" style="font-family: 'Open Sans',Arial !important;color: grey;">Admit Post / nov 1 2024</p>
+          <h2 class="ms-3 mt-2 fs-3" style="color: #2F2D4E;">Researcher unearths age in the desert</h2>
+          </div>
+          <div class="position-relative co" style="width: 350px;height: 450px;background-color: #FFF8F7;">
+            <img src="img/blog3.png" alt="" class="w-100" style="height: 65%;">
+            <p class="ms-3 mt-3" style="font-family: 'Open Sans',Arial !important;color: grey;">Admit Post / nov 1 2024</p>
+            <h2 class="ms-3 mt-2 fs-3" style="color: #2F2D4E;">High-protein rice brings value, nutrition</h2>
+            </div>
+    </div>
+  </div>
+  <div class="footer mt-5 d-flex flex-column" style="background-color: #FFF8F7;padding-top: 120px;padding-bottom: 70px;">
+    <div class="container d-flex flex-wrap">
+      <div class="" style="width: 200px;height: 250px;">
+        <h3 class="mt-3" style="color: #2F2D4E;">Top Products</h3>
+        <ul class="mt-2" style="list-style: none !important;margin-left: -20px;"></ul>
+        <li class="mt-3" style="list-style: none !important;color: rgb(187, 187, 187) !important;font-weight: 340;">Managed Website</li>
+        <li class="mt-3" style="list-style: none !important;color: rgb(187, 187, 187) !important;font-weight: 340;">Manage Reputation</li>
+        <li class="mt-3" style="list-style: none !important;color: rgb(187, 187, 187) !important;font-weight: 340;">Power Tools</li>
+        <li class="mt-3" style="list-style: none !important;color: rgb(187, 187, 187) !important;font-weight: 340;">Marketing Service</li>
+      </div>
+      <div class="" style="width: 200px;height: 250px;">
+        <h3 class="mt-3" style="color: #2F2D4E;">Quick Links</h3>
+        <ul class="mt-2" style="list-style: none !important;margin-left: -20px;"></ul>
+        <li class="mt-3" style="list-style: none !important;color: rgb(187, 187, 187) !important;font-weight: 340;">Jobs</li>
+        <li class="mt-3" style="list-style: none !important;color: rgb(187, 187, 187) !important;font-weight: 340;">Brand Assets</li>
+        <li class="mt-3" style="list-style: none !important;color: rgb(187, 187, 187) !important;font-weight: 340;">Investor Relations</li>
+        <li class="mt-3" style="list-style: none !important;color: rgb(187, 187, 187) !important;font-weight: 340;">Terms of Service</li>
+      </div>
+      <div class="" style="width: 200px;height: 250px;">
+        <h3 class="mt-3" style="color: #2F2D4E;">Features        </h3>
+        <ul class="mt-2" style="list-style: none !important;margin-left: -20px;"></ul>
+        <li class="mt-3" style="list-style: none !important;color: rgb(187, 187, 187) !important;font-weight: 340;">Jobs</li>
+        <li class="mt-3" style="list-style: none !important;color: rgb(187, 187, 187) !important;font-weight: 340;">Brand Assets</li>
+        <li class="mt-3" style="list-style: none !important;color: rgb(187, 187, 187) !important;font-weight: 340;">Investor Relations</li>
+        <li class="mt-3" style="list-style: none !important;color: rgb(187, 187, 187) !important;font-weight: 340;">Terms of Service</li>
+      </div>
+      <div class="" style="width: 200px;height: 250px;">
+        <h3 class="mt-3" style="color: #2F2D4E;">Resources</h3>
+        <ul class="mt-2" style="list-style: none !important;margin-left: -20px;"></ul>
+        <li class="mt-3" style="list-style: none !important;color: rgb(187, 187, 187) !important;font-weight: 340;">Guides</li>
+        <li class="mt-3" style="list-style: none !important;color: rgb(187, 187, 187) !important;font-weight: 340;">Research</li>
+        <li class="mt-3" style="list-style: none !important;color: rgb(187, 187, 187) !important;font-weight: 340;">Experts</li>
+        <li class="mt-3" style="list-style: none !important;color: rgb(187, 187, 187) !important;font-weight: 340;">Agencies</li>
+      </div>
+      <div class=" position-relative" style="width: 310px;height: 250px;">
+        <h3 class="mt-3" style="color: #2F2D4E;">Newsletter</h3>
+        <p class="" style="color: rgb(184, 184, 184);">You can trust us. we only send promo offers,</p>
+        <input type="text" class="w-100 ps-3" placeholder="YOUR EMAIL ADDRESS" style="background: none !important;height: 40px;border: 1px solid rgb(207, 207, 207);">
+        <div class="fs-3 text-center position-absolute" style="width: 40px;height: 40px ;background-color: #f10000;color: white;font-weight: 900;top: 122px;right: 0px;">→</div>
+      </div>
+    </div>
+    <div class="container mt-5 d-flex flex-wrap justify-content-between">
+      <p class="" style="color: rgb(189, 189, 189);">Copyright ©2024 All rights reserved | This template is made with <a href="https://github.com/DeveloperInsharah" class="" style="color: rgb(189, 189, 189);text-decoration: none !important;">@ Insharah Irfan</a></p>
+      <div class="fs-2" style="margin-top: -10px;">  
+        <i class="ri-facebook-box-fill"></i>
+        <i class="ri-instagram-fill"></i>
+        <i class="ri-linkedin-box-fill"></i></div>
+    </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
